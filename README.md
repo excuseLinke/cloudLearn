@@ -7,9 +7,9 @@
     -- service-boy 服务提供者   </br>
     -- service-ribbon 消费者   </br>
         --包含   </br>
-            -- ribbon 提供负载均衡   </br>
-            -- Hystrix 断路器   </br>
-            -- Hystrix Dashboard 断路器仪表,提供视图化管理   </br>
+               &nbsp; -- ribbon 提供负载均衡   </br>
+               &nbsp; -- Hystrix 断路器   </br>
+               &nbsp; -- Hystrix Dashboard 断路器仪表,提供视图化管理   </br>
     --service-zuul 路由 提供访问分发,服务过滤   </br>
 
 #如果需要横向拓展   </br>
