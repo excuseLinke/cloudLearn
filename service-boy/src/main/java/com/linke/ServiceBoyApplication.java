@@ -20,6 +20,6 @@ public class ServiceBoyApplication {
 	String port;
 	@RequestMapping("/boy")
 	public  String home(@RequestParam String name){
-		return "boy"+name+"My port is :"+port;
+		return "boy"+name+"：My port is :"+port;
 	}
 }
