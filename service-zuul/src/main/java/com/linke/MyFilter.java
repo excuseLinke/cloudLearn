@@ -34,19 +34,18 @@ public class MyFilter extends ZuulFilter {
     public Object run() {
         RequestContext requestContext = RequestContext.getCurrentContext();
         HttpServletRequest request = requestContext.getRequest();
-        log.info(String.format("%s >>> %s", request.getMethod(), request.getRequestURL().toString()));
-        Object accessToken = request.getParameter("token");
-        if(accessToken == null) {
+        Object token = request.getParameter("token");
+        if(token == null) {
             log.warn("token is empty");
             requestContext.setSendZuulResponse(false);
-            requestContext.setResponseStatusCode(401);
+            requestContext.setResponseStatusCode(306);
             try {
-                requestContext.getResponse().getWriter().write("token is empty");
+                requestContext.getResponse().getWriter().write("token is null");
             }catch (Exception e){}
 
             return null;
         }
-        log.info("ok");
+        log.info("token is ok");
         return null;
     }
 }
